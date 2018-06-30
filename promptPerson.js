@@ -14,6 +14,8 @@ rl.question("What is the name of a real person?", function (answer) {
   rl.prompt();
 
   rl.on('line', function (saying) {
-    console.log(saying.trim());
+    rl.setPrompt(`What else would ${realPerson.name} say? ('exit' to leave) `);
+
+    rl.prompt();
   });
 });
